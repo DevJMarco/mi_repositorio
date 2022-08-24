@@ -1,0 +1,715 @@
+/*Estilos globales*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/**/
+body{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+/*--------------------LOYOUT GRID GENERAL-----------------------*/
+
+.contenedor_padre{
+    display: grid;
+    grid-template: 
+    "header" auto 
+    "main" 50vh
+    "contenido" auto
+    "footer" auto /
+    100% ;
+}
+
+/*--------------------Header para todas las paginas-----------------------*/ 
+.header{
+    grid-area: header;
+    background: #1A1B1C;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+.logo_box{
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.logo_box .name_company{
+    font-family: 'Amatic SC', cursive;
+    padding-left: 12px;
+    font-size: 30px;
+    cursor: default;
+}
+
+.button_menu{
+    height: 2em;
+    width: 2em;
+    display: none;
+}
+
+.list,  a{
+    text-decoration: none;
+    list-style: none;
+    color: #fff;
+}
+
+.list{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.list_item{
+    padding: 10px;
+    font-size: 1.3em;
+    text-transform: uppercase;
+}
+
+.list_item:hover{
+    background: orange;
+    transition: .5s;
+}
+
+/*--------------------Main para el index-----------------------*/ 
+.main{
+    grid-area: main;
+}
+
+#index{
+    background: url(../img/fondo_index.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1.5em;
+}
+
+#index .title, p, .title {
+    color: white;
+    /* line-height: 1.5; */
+}
+
+#index .title, .title{
+    margin: 50px 0 50px 0;
+}
+
+/*--------------------Contenido principal para el index-----------------------*/
+.contenido{
+    grid-area: contenido;
+    background: #727683;
+}
+
+.contenedor-cajas{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.contenedor-cajas .caja{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #32343C;
+    margin: 20px;
+    height: 250px;
+    width: 200px;
+    border-radius: 3px;
+}
+
+.product{
+    background: #fff;
+    height: 150px;
+    width: 150px;
+    border-radius: 3px;
+}
+
+.caja p{
+    padding-top: 15px;
+} 
+
+/*--------------------Pie de pagina para todas las paginas-----------------------*/
+.footer{
+    grid-area: footer;
+    background: #1A1B1C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 1em; 
+}
+
+/*--------------------Main para todas las paginas-----------------------*/
+.main{
+    background: #222326;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/*--------------------Contenido principal para Servicios-----------------------*/
+#servicios{
+    height: auto;
+    display: grid;
+    grid-template:
+    "cajaServicio1 cajaServicio2" 350px
+    "cajaServicio3 cajaServicio4" 350px
+    "cajaServicio5 cajaServicio6" 350px /
+    40% 40%;
+    gap: 40px;
+    justify-content: center;
+    padding: 5em;
+}
+
+.cajaServicio1{
+    grid-area: cajaServicio1;
+}
+
+.cajaServicio2{
+    grid-area: cajaServicio2;
+}
+
+.cajaServicio3{
+    grid-area: cajaServicio3;
+}
+
+.cajaServicio4{
+    grid-area: cajaServicio4;
+}
+
+.cajaServicio5{
+    grid-area: cajaServicio5;
+}
+
+.cajaServicio6{
+    grid-area: cajaServicio6;
+}
+
+.cajaServicio1, .cajaServicio2, .cajaServicio3, .cajaServicio4, .cajaServicio5, .cajaServicio6{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 5px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+    transition: all 400ms ease;
+    cursor: default;
+}
+
+.cajaServicio1:hover, .cajaServicio2:hover, .cajaServicio3:hover, .cajaServicio4:hover, .cajaServicio5:hover, .cajaServicio6:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.7);
+    transform: translateY(-3%);
+}
+
+.imgServicio{
+    height: 50%;
+    border-radius: 5px 5px 0 0;
+}
+
+.icono-servicio{
+    display: flex;
+    justify-content: center;
+}
+
+.servicio-descripcion{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.servicio-descripcion P{
+    color: black;
+    padding-top: 10px;
+    line-height: 1.5;
+}
+
+
+/*--------------Contenido principal para Productos--------------*/
+#productos{
+    background: #727683;
+    height: auto;
+    display: grid;
+    grid-template:
+    "caja1 caja2 caja3" 400px
+    "caja4 caja5 caja6" 400px /
+    30% 30% 30%;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+}
+
+.caja1{
+    grid-area: caja1;
+}
+
+.caja2{
+    grid-area: caja2;
+}
+
+.caja3{
+    grid-area: caja3;
+}
+
+.caja4{
+    grid-area: caja4;
+}
+
+.caja5{
+    grid-area: caja5;
+}
+
+.caja6{
+    grid-area: caja6;
+}
+
+.caja1, .caja2, .caja3, .caja4, .caja5, .caja6{
+    background: white;
+    border-radius: 5px;
+}
+
+.imgProdcuto{
+    height: 50%;
+    margin: 30px;
+}
+
+#servicios .seccionInferior, h3, .carrito{
+    cursor: pointer;
+}
+
+.precioYcarrito{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.precio{
+    background: #184770;
+    height: 50px;
+    width: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0 15px 0 0;
+}
+
+.carrito{
+    background: #7088A0;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+}
+
+/*--------------Contenido principal para Nosotros--------------*/
+#nosotros{
+    background: #727683;
+    height: auto;
+    display: grid;
+    grid-template:
+    "cajaComentario1 cajaComentario2 cajaComentario3" auto /
+    30% 30% 30%;
+    gap: 40px;
+    justify-content: center;
+    padding: 5em;
+}
+
+.cajaComentario1, .cajaComentario2, .cajaComentario3{
+    background: #171717;
+}
+
+.cajaComentario1{
+    grid-area: cajaComentario1;
+}
+
+.cajaComentario2{
+    grid-area: cajaComentario2;
+}
+
+.cajaComentario3{
+    grid-area: cajaComentario3;
+}
+
+#nosotros img{
+    height: 90px;
+    object-fit: cover;
+    margin-top: -50px;
+}
+
+#nosotros h3{
+    color: #fff;
+    font-size: 30px;
+    padding: 20px;
+}
+
+#nosotros p{
+    line-height: 1.5;
+    padding: 1em;
+}
+
+#nosotros i{
+    color: #e91e63;
+    padding-bottom: 1em ;
+    font-size: 20px;
+}
+
+/*--------------Contenido principal para Contacto--------------*/
+#contacto{
+    /* height: auto; */
+    display: grid;
+    grid-template:
+    "seccionIzquierda seccionDerecha" auto / 
+    50% 50%;
+    justify-content: center;
+}
+
+/*--------SECCION-IZQUIEDA--------*/
+.seccionIzquierda{
+    grid-area: seccionIzquierda;
+}
+
+.cajaUbicacion h3{
+    color: white;
+    font-size: 40px;
+    padding: 30px;
+}
+
+.cajaUbicacion p{
+    color: white;
+    font-size: 20px;
+    padding: 30px;
+}
+
+#contacto .cajaUbicacion img{
+    width: 90%;
+    max-width: 700px;
+}
+
+
+/*--------SECCION-DERECHA--------*/
+.seccionDerecha{
+    grid-area: seccionDerecha;
+    background: #727683;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form{
+    background: #181818; 
+    height: auto;
+    width: 70%;
+    padding: 50px;
+    box-shadow: 0 0 20px 0 rgba(225, 225, 225, .3);
+}
+
+.contact-form div{
+    margin: 20px;
+}
+
+.contact-form label{
+    display: block;
+    text-align: left;
+    padding-bottom: 15px;
+}
+
+.contact-form input, textarea{
+    background: none;
+    outline: none;
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid #d63031;
+    color: #fff;
+}
+
+.submit-reset{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-form button{
+    background: #B70E21;
+    border: 0;
+    text-transform: uppercase;
+    padding: 15px;
+}
+
+.contact-form button:hover,
+.contact-form button:focus {
+    background: #d63031;
+    color: #fff;
+    transition: 1s ease-out;
+}
+
+/*----------------------------Responsive tablet--------------------------------*/
+@media (max-width: 992px) {
+    /*--------header para todas las paginas--------*/
+    .header .logo_box .name_company{
+        padding: 1em;
+        font-size: 20px;
+    }
+
+    .header .button_menu{
+        display: block;
+        cursor: pointer;
+        height: 3em;
+        width: 3em;
+        color: #fff;
+    }
+
+    .header .navbar{
+        width: 100%;
+        height: 0;
+        transition: all .5s ease;
+    }
+
+    .header .navbar.activo{
+        background: #727683;
+        height: 50vh;
+    }
+
+    .header .list_item{
+        font-size: 1em;
+        margin: 1rem 0;
+    }
+
+    .header .list{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*responsive Servicios*/
+    #servicios{
+            grid-template:
+            "cajaServicio1 cajaServicio2" auto
+            "cajaServicio3 cajaServicio4" auto
+            "cajaServicio5 cajaServicio6" auto /
+            45% 45%;
+            gap: 20px;
+            padding: 20px; 
+    }
+    
+    #servicios .servicio-descripcion h3{
+            width:max-content;
+    }
+    
+    /*Resposive Productos*/
+    #productos{
+        grid-template:
+        "caja1 caja2" 350px
+        "caja3 caja4" 350px
+        "caja5 caja6" 350px;
+        gap: 50px;
+        padding: 50px;
+    }
+    
+    .imgProdcuto{
+        height: 50%;
+        margin: 10px;
+    }
+
+    /*Responsive Nosotros*/
+    #nosotros{
+        grid-template: 
+        "cajaComentario1 cajaComentario2" auto 
+        "cajaComentario3 ." auto /
+        40% 40%;
+        gap: 70px;
+        padding: 5em;
+    }
+
+    /*Responsive Contacto*/
+    #contacto{
+        display: grid;
+        grid-template:
+        "seccionIzquierda" auto
+        "seccionDerecha" auto / 
+        90%;
+    }
+
+    .seccionDerecha{
+        padding: 2em;
+    }
+
+}
+
+
+/*----------------------------Responsive mobile--------------------------------*/
+
+@media (max-width: 580px) {
+
+    /*--------header para todas las paginas--------*/
+    .header .logo_box{
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header .logo_box h2{
+        padding: 0;
+        font-size: 20px;
+    }
+
+    .header .navbar{
+        width: 100%;
+        height: 0;
+        transition: all .5s ease;
+    }
+
+    .header .navbar.activo{
+        background: #727683;
+        height: 50vh;
+    }
+
+    .header .list_item{
+        font-size: 1em;
+        margin: 1rem 0;
+    }
+    .header .list{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header .button_menu{
+        display: block;
+        cursor: pointer;
+        height: 3em;
+        width: 3em;
+        color: #fff;
+    }
+
+    /*--------Main para el index index--------*/
+
+    #index .title{
+        margin: 0;
+        padding-bottom: 15px;
+    }
+    #index{
+        padding: 0.5em;
+        line-height: 1.2;
+    }
+
+
+    /*--------Responsive Servicios-----------*/
+
+    #servicios{
+        grid-template:
+        "cajaServicio1" 300px
+        "cajaServicio2" 300px
+        "cajaServicio3" 300px
+        "cajaServicio4" 300px
+        "cajaServicio5" 300px
+        "cajaServicio6" 300px;
+        gap: 20px;
+        padding: 20px; 
+    }
+
+    #servicios .servicio-descripcion h3{
+        width:max-content;
+    }
+
+
+ /*--------Responsive Productos-----------*/
+
+ #productos{
+    grid-template:
+    "caja1" 340px
+    "caja2" 340px
+    "caja3" 380px
+    "caja4" 340px
+    "caja5" 340px
+    "caja6" 340px ;
+    gap: 50px;
+    padding: 50px;
+}
+
+.imgProdcuto{
+    height: 50%;
+    margin: 10px;
+}
+
+/*--------Responsive Nosotros-----------*/
+
+#nosotros{
+    grid-template: 
+    "cajaComentario1" auto
+    "cajaComentario2" auto
+    "cajaComentario3" auto /
+    300px;
+    gap: 90px;
+}
+
+/*--------Responsive Contacto-----------*/
+
+    #contacto{
+         height: auto;
+         width: 100%;
+         grid-template:
+         "seccionIzquierda" auto 
+         "seccionDerecha" auto /
+         100%;
+    }
+
+    .seccionIzquierda img{
+        width: 90% ;
+    }
+
+    .seccionDerecha{
+        height: auto;
+        padding: 60px 0 60px 0;
+    }
+
+    .contact-form{
+        height: auto;
+        width: 90%;
+    }
+
+    /*footer para todas las paginas*/
+    .footer .logoFooter{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
