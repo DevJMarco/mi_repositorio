@@ -81,6 +81,7 @@ body{
 
 #index{
     background: url(../img/fondo_index.jpg) no-repeat center;
+    height: auto;
     background-size: cover;
     background-attachment: fixed;
     display: flex;
@@ -362,7 +363,7 @@ body{
 
 #nosotros i{
     color: #e91e63;
-    padding-bottom: 1em ;
+    padding: 1.5em 0 2em 0 ;
     font-size: 20px;
 }
 
@@ -436,23 +437,74 @@ body{
     color: #fff;
 }
 
-.submit-reset{
+/*animacion botones*/
+.contenedor_botones{
+    width: 90%;
     display: flex;
     justify-content: space-between;
 }
 
-.contact-form button{
-    background: #B70E21;
-    border: 0;
-    text-transform: uppercase;
-    padding: 15px;
+.contenedor_botones .button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100px;
+    height: 50px;
+    color: #fff;
+    font-size: 15px;
+    border: none;
 }
 
-.contact-form button:hover,
-.contact-form button:focus {
-    background: #d63031;
+.button{
+    background: #141414;
     color: #fff;
-    transition: 1s ease-out;
+}
+
+.button.uno svg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: none;
+}
+
+.button.uno rect{
+    width: 100%;
+    height: 100%;
+    stroke: #d63031;
+    stroke-width: 4px;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    transition: .9s ease all;
+}
+
+.button.uno:hover rect{
+    stroke-dashoffset: 0;
+}
+
+.button.dos svg{
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: none;
+}
+
+.button.dos rect{
+    width: 100%;
+    height: 100%;
+    stroke: #d63031;
+    stroke-width: 4px;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    transition: .9s ease all;
+}
+
+.button.dos:hover rect{
+    stroke-dashoffset: 0;
 }
 
 /*----------------------------Responsive tablet--------------------------------*/
@@ -595,18 +647,24 @@ body{
     }
 
     /*--------Main para el index index--------*/
-
-    #index .title{
+    #index .main_center .title{
+        padding-bottom: 1.5em;
         margin: 0;
-        padding-bottom: 15px;
     }
-    #index{
-        padding: 0.5em;
-        line-height: 1.2;
+    #index .main_center{
+        padding: 1em;
     }
-
 
     /*--------Responsive Servicios-----------*/
+
+    .main_center .title{
+        padding-bottom: 1.5em;
+        margin: 0;
+    }
+
+    .main_center{
+        padding: 1em;
+    }
 
     #servicios{
         grid-template:
@@ -615,9 +673,11 @@ body{
         "cajaServicio3" 300px
         "cajaServicio4" 300px
         "cajaServicio5" 300px
-        "cajaServicio6" 300px;
-        gap: 20px;
-        padding: 20px; 
+        "cajaServicio6" 300px /
+        90%;
+        gap: 40px;
+        padding: 2em .5em 2em .5em;
+        
     }
 
     #servicios .servicio-descripcion h3{
@@ -651,10 +711,13 @@ body{
     "cajaComentario1" auto
     "cajaComentario2" auto
     "cajaComentario3" auto /
-    300px;
-    gap: 90px;
+    85%;
+    gap: 7em;
+    padding: 7em 0 7em 0;
 }
-
+#nosotros .stars{
+    padding: 20px;
+}
 /*--------Responsive Contacto-----------*/
 
     #contacto{
@@ -685,13 +748,6 @@ body{
         display: none;
     }
 }
-
-
-
-
-
-
-
 
 
 
