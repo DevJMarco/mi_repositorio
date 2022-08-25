@@ -561,8 +561,8 @@ body{
         align-items: center;
     }
 
-    .header .logo_box h2{
-        padding: 0;
+    .header .logo_box .name_company{
+        padding: .3em;
         font-size: 20px;
     }
 
