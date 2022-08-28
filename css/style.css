@@ -23,7 +23,16 @@ body{
 }
 
 /*--------------------Header para todas las paginas-----------------------*/ 
-.header{
+
+header{
+    background: #1A1B1C;
+}
+
+.nav-link{
+    color: #fff;
+}
+
+/* .header{
     grid-area: header;
     background: #1A1B1C;
     display: flex;
@@ -72,7 +81,7 @@ body{
 .list_item:hover{
     background: orange;
     transition: .5s;
-}
+} */
 
 /*--------------------Main para el index-----------------------*/ 
 .main{
@@ -148,6 +157,14 @@ body{
     align-items: center;
     align-content: center;
     padding: 1em; 
+    height: auto;
+}
+
+.info h3, .info a, .info p{
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    color: #fff !important;
 }
 
 /*--------------------Main para todas las paginas-----------------------*/
@@ -286,9 +303,18 @@ body{
     margin: 30px;
 }
 
-#servicios .seccionInferior, h3, .carrito{
+#productos .seccionInferior, h3, .carrito{
     cursor: pointer;
 }
+
+#productos h3{
+    font-size: 20px;
+}
+
+#productos .precio p, .carrito p{
+    margin: 0;
+}
+
 
 .precioYcarrito{
     margin-top: 20px;
