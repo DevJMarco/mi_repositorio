@@ -15,7 +15,7 @@
             <nav class="col navbar navbar-expand-lg bg-none p-2">
                 <div class="container-fluid">
                     <div class="logotype d-flex justify-content-center ps-2" >
-                        <a href="#"><img src="./img/logo_header.png" alt=""></a> 
+                        <a href="#"><img src="../img/logo_header.png" alt=""></a> 
                         <a class="navbar-brand m-2 fs-2.5 text-white" href="#">CompTech</a>
                     </div>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,71 +68,65 @@
         <!------------------------CONTENIDO------------------------->  
         <section id="contacto" class="contenido">
 
-            <section class="seccionIzquierda">
+            <article class="first_section">
 
-                <div class="contenedorContacto">
-    
-                    <div class="cajaUbicacion">
-    
-                        <h3>Nos ubicamos en Benavides!</h3>
-    
-                        <a href="https://www.google.com.ar/maps/preview"><img src="../img/mapa.png" alt=""></a>
-                            
-                        <p>Horario de Atención: 
-    
-                            Lunes a Viernes de 10 a 18 hs</p>
-    
-                    </div>
-                
+                <div class="form_box">
+
+                    <form class="row g-3 container-fluid p-4 m-0 h-100 justify-content-between">
+
+                        <div class="col-md-6 m-0 p-0 columna">
+                            <label for="fullname" class="form-label"></label>
+                            <input type="text" class="form-control" id="fullname" placeholder="Nombre">
+                        </div>
+
+                        <div class="col-md-6 m-0 p-0 columna">
+                            <label for="inputEmail4" class="form-label"></label>
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                        </div>
+                        
+                        <div class="col-6 m-0 p-0 columna">
+                            <label for="inputAddress" class="form-label"></label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Dirección">
+                        </div>
+
+                        <div class="col-6 m-0 p-0 columna">
+                            <label for="inputAddress" class="form-label"></label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Telefono" >
+                        </div>
+
+                        <div class="m-0 p-0">
+                            <label for="exampleFormControlTextarea1" class="form-label"></label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Descripcion"></textarea>
+                        </div>
+
+                        <div class="col-12 m-0 p-0">
+                            <button type="submit" class="btn btn-primary w-100">Enviar</button>
+                        </div>
+                    </form>
+
+                    
                 </div>
-            
-            </section>
-    
-            <section class="seccionDerecha">
-    
-                <form action="" class="contact-form">
-    
-                    <div>
-                        <label for="fullname">Nombre Completo</label>
-                        <input type="text" name="fullname" id="fullname">
-                    </div>
-    
-                    <div>
-                        <label>Correo Electronico</label>
-                        <input type="email" name="email">
-                    </div>
-    
-                    <div>
-                        <label>Telefono</label>
-                        <input type="tel" name="phone">
-                    </div>
-    
-                    <div>
-                        <label>Detalles</label>
-                        <textarea name="message" rows="3"></textarea>
-                    </div>
-    
-                    <div class="contenedor_botones">
 
-                        <button type="reset" class="button uno">
-                            <span>resetear</span>
-                            <svg>
-                                <rect x="0" y="0" fill="none"></rect>
-                            </svg>
-                        </button>
-
-                        <button type="submit" class="button dos">
-                            <span>enviar</span>
-                            <svg>
-                                <rect x="0" y="0" fill="none"></rect>
-                            </svg>
-                        </button>
-
-                    </div>
-   
-                </form>
+            </article>
     
-            </section>
+            <article class="second_section">
+
+                <div class="info_contact p-5">
+                    <div class="date pb-4">
+                        <p class="m-2">Llámenos</p>   
+                        <h6>+54 1143549987</h6>
+                    </div>
+                    <div class="date pb-4">
+                        <p class="m-2">Escríbenos</p>    
+                        <h6>CompTech@gmail.com</h6>
+                    </div>
+                    <div class="date">
+                        <p class="m-2">Visítenos</p>    
+                        <h6>Avenida Alfredo, Benavides 1555 </h6>
+                    </div>
+                </div>
+
+            </article>
 
         </section>
 
