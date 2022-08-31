@@ -32,6 +32,10 @@ header{
     color: #fff;
 }
 
+.rrss{
+    color: #fff;
+}
+
 /*--------------------Main para el index-----------------------*/ 
 .main{
     grid-area: main;
@@ -70,6 +74,7 @@ padding-bottom: 1em;
     height: 250px;
     width: 200px;
     border-radius: 3px;
+    color: #fff;
 }
 
 .product{
@@ -249,6 +254,7 @@ padding-bottom: 1em;
 
 .cajaComentario1, .cajaComentario2, .cajaComentario3{
     background: #171717;
+    color: #fff;
 }
 
 .cajaComentario1{
@@ -297,8 +303,6 @@ padding-bottom: 1em;
     70% 30%;
 }
 
-
-
 /*--------SECCION-IZQUIEDA--------*/
 .first_section{
     grid-area: first_section;
@@ -321,8 +325,6 @@ padding-bottom: 1em;
 #contacto .columna{
     width: 40% !important;
 }
-
-
 
 /*--------SECCION-DERECHA--------*/
 .second_section{
@@ -570,7 +572,7 @@ padding-bottom: 1em;
     "first_section" auto
     "second_section" auto / 
     100%;
-}
+    }
 
     .seccionIzquierda img{
         width: 90% ;
