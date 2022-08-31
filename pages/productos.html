@@ -4,32 +4,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="../img/icono_favicon.ico">
-    <script defer src="../assets/menu.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
     <title>CompTech</title>
 </head>
 <body>
     <div class="contenedor_padre">
         <!------------------------ENCABEZADO------------------------->
-        <header class="header">
-
-            <div class=logo_box>
-                <a href="#"><img src="../img/logo_header.png" alt=""></a>
-                <h2 class="name_company">CompTech</h2>
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="button_menu" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-            </svg>
-            <nav class="navbar">
-                <ul class="list">
-                    <li class="list_item"><a href="../index.html">Home</a></li>
-                    <li class="list_item"><a href="servicios.html">Servicios</a></li>
-                    <li class="list_item"><a href="#">Productos</a></li>
-                    <li class="list_item"><a href="nosotros.html">Nosotros</a></li>
-                    <li class="list_item"><a href="contacto.html">Contacto</a></li>
-                </ul>
+        <header class="row container-fluid p-0 m-0">
+            <nav class="col navbar navbar-expand-lg bg-none p-2">
+                <div class="container-fluid">
+                    <div class="logotype d-flex justify-content-center ps-2" >
+                        <a href="#"><img src="../img/logo_header.png" alt=""></a> 
+                        <a class="navbar-brand m-2 fs-2.5 text-white" href="#">CompTech</a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-uppercase">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./servicios.html">Servicios</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Notebooks</a></li>
+                                    <li><a class="dropdown-item" href="#">Componentes</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Productos</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./nosotros.html">Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./contacto.html">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
-
         </header>
         <!------------------------CUERPO------------------------->
         <main class="main">
@@ -213,7 +231,7 @@
 
             <a href="#"><img src="../img/logo_header.png" alt="" class="logoFooter"></a>
 
-            <div>
+            <div class="info">
 
                 <h3><a href="https://www.google.com.ar/maps/preview" target="_blank" class="contactoFooter">Contacto</a></h3>
 
@@ -243,5 +261,6 @@
 
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>

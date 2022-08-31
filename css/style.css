@@ -23,55 +23,17 @@ body{
 }
 
 /*--------------------Header para todas las paginas-----------------------*/ 
-.header{
-    grid-area: header;
+
+header{
     background: #1A1B1C;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1em;
 }
 
-.logo_box{
-    display: flex;
-    align-items: center;
+.nav-link{
     color: #fff;
 }
 
-.logo_box .name_company{
-    font-family: 'Amatic SC', cursive;
-    padding-left: 12px;
-    font-size: 30px;
-    cursor: default;
-}
-
-.button_menu{
-    height: 2em;
-    width: 2em;
-    display: none;
-}
-
-.list,  a{
-    text-decoration: none;
-    list-style: none;
+.rrss{
     color: #fff;
-}
-
-.list{
-    display: flex;
-    flex-flow: row wrap;
-}
-
-.list_item{
-    padding: 10px;
-    font-size: 1.3em;
-    text-transform: uppercase;
-}
-
-.list_item:hover{
-    background: orange;
-    transition: .5s;
 }
 
 /*--------------------Main para el index-----------------------*/ 
@@ -79,32 +41,18 @@ body{
     grid-area: main;
 }
 
-#index{
-    background: url(../img/fondo_index.jpg) no-repeat center;
-    height: auto;
-    background-size: cover;
-    background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 1.5em;
-}
-
-#index .title, p, .title {
-    color: white;
-    /* line-height: 1.5; */
-}
-
-#index .title, .title{
-    margin: 50px 0 50px 0;
-}
-
 /*--------------------Contenido principal para el index-----------------------*/
 .contenido{
     grid-area: contenido;
     background: #727683;
+}
+
+.box_content{
+    padding: 5em 5em 0 5em;
+}
+
+.box_content .title{
+padding-bottom: 1em;
 }
 
 .contenedor-cajas{
@@ -126,6 +74,7 @@ body{
     height: 250px;
     width: 200px;
     border-radius: 3px;
+    color: #fff;
 }
 
 .product{
@@ -148,6 +97,14 @@ body{
     align-items: center;
     align-content: center;
     padding: 1em; 
+    height: auto;
+}
+
+.info h3, .info a, .info p{
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    color: #fff !important;
 }
 
 /*--------------------Main para todas las paginas-----------------------*/
@@ -161,82 +118,40 @@ body{
 
 
 /*--------------------Contenido principal para Servicios-----------------------*/
-#servicios{
-    height: auto;
-    display: grid;
-    grid-template:
-    "cajaServicio1 cajaServicio2" 350px
-    "cajaServicio3 cajaServicio4" 350px
-    "cajaServicio5 cajaServicio6" 350px /
-    40% 40%;
-    gap: 40px;
-    justify-content: center;
-    padding: 5em;
-}
 
-.cajaServicio1{
-    grid-area: cajaServicio1;
-}
-
-.cajaServicio2{
-    grid-area: cajaServicio2;
-}
-
-.cajaServicio3{
-    grid-area: cajaServicio3;
-}
-
-.cajaServicio4{
-    grid-area: cajaServicio4;
-}
-
-.cajaServicio5{
-    grid-area: cajaServicio5;
-}
-
-.cajaServicio6{
-    grid-area: cajaServicio6;
-}
-
-.cajaServicio1, .cajaServicio2, .cajaServicio3, .cajaServicio4, .cajaServicio5, .cajaServicio6{
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    border-radius: 5px;
+.card{
+    height: 350px;
+    width: 90% !important;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
     transition: all 400ms ease;
     cursor: default;
 }
 
-.cajaServicio1:hover, .cajaServicio2:hover, .cajaServicio3:hover, .cajaServicio4:hover, .cajaServicio5:hover, .cajaServicio6:hover{
+.card img{
+    height: 50%;
+}
+
+#servicios .col{
+    width: 40%;
+    /* padding-right: 20px !important; */
+}
+
+@media (max-width: 800px){
+    .card img{
+        height: 50% !important;
+    }
+    #servicios .card{
+        height: auto;
+    }
+    #servicios .col{
+        width: 80% !important;
+    }
+}
+
+.card:hover{
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.7);
     transform: translateY(-3%);
 }
-
-.imgServicio{
-    height: 50%;
-    border-radius: 5px 5px 0 0;
-}
-
-.icono-servicio{
-    display: flex;
-    justify-content: center;
-}
-
-.servicio-descripcion{
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.servicio-descripcion P{
-    color: black;
-    padding-top: 10px;
-    line-height: 1.5;
-}
-
 
 /*--------------Contenido principal para Productos--------------*/
 #productos{
@@ -286,9 +201,18 @@ body{
     margin: 30px;
 }
 
-#servicios .seccionInferior, h3, .carrito{
+#productos .seccionInferior, h3, .carrito{
     cursor: pointer;
 }
+
+#productos h3{
+    font-size: 20px;
+}
+
+#productos .precio p, .carrito p{
+    margin: 0;
+}
+
 
 .precioYcarrito{
     margin-top: 20px;
@@ -330,6 +254,7 @@ body{
 
 .cajaComentario1, .cajaComentario2, .cajaComentario3{
     background: #171717;
+    color: #fff;
 }
 
 .cajaComentario1{
@@ -367,145 +292,58 @@ body{
     font-size: 20px;
 }
 
+
+
 /*--------------Contenido principal para Contacto--------------*/
+
 #contacto{
-    /* height: auto; */
     display: grid;
-    grid-template:
-    "seccionIzquierda seccionDerecha" auto / 
-    50% 50%;
-    justify-content: center;
+    grid-template: 
+    "first_section second_section" 600px /
+    70% 30%;
 }
 
 /*--------SECCION-IZQUIEDA--------*/
-.seccionIzquierda{
-    grid-area: seccionIzquierda;
-}
-
-.cajaUbicacion h3{
-    color: white;
-    font-size: 40px;
-    padding: 30px;
-}
-
-.cajaUbicacion p{
-    color: white;
-    font-size: 20px;
-    padding: 30px;
-}
-
-#contacto .cajaUbicacion img{
-    width: 90%;
-    max-width: 700px;
-}
-
-
-/*--------SECCION-DERECHA--------*/
-.seccionDerecha{
-    grid-area: seccionDerecha;
+.first_section{
+    grid-area: first_section;
     background: #727683;
-    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+    align-content: center;
 }
 
-.contact-form{
-    background: #181818; 
-    height: auto;
-    width: 70%;
-    padding: 50px;
+.form_box{
+    background:#32343C;
+    width: 60%;
+    height: 80%;
+    padding: 0;
+    margin: 0;
     box-shadow: 0 0 20px 0 rgba(225, 225, 225, .3);
 }
 
-.contact-form div{
-    margin: 20px;
+#contacto .columna{
+    width: 40% !important;
 }
 
-.contact-form label{
-    display: block;
-    text-align: left;
-    padding-bottom: 15px;
+/*--------SECCION-DERECHA--------*/
+.second_section{
+    grid-area: second_section;
+    background:#7088A0;
 }
 
-.contact-form input, textarea{
-    background: none;
-    outline: none;
-    border: none;
-    width: 100%;
-    border-bottom: 1px solid #d63031;
-    color: #fff;
+
+#contacto form div input{
+    /* background: #e91e63; */
+    border: none !important;
 }
 
-/*animacion botones*/
-.contenedor_botones{
-    width: 90%;
+.second_section{
     display: flex;
-    justify-content: space-between;
-}
-
-.contenedor_botones .button{
-    display: inline-flex;
-    align-items: center;
     justify-content: center;
-    position: relative;
-    width: 100px;
-    height: 50px;
-    color: #fff;
-    font-size: 15px;
-    border: none;
+    align-items: center;
 }
 
-.button{
-    background: #141414;
-    color: #fff;
-}
-
-.button.uno svg{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    fill: none;
-}
-
-.button.uno rect{
-    width: 100%;
-    height: 100%;
-    stroke: #d63031;
-    stroke-width: 4px;
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    transition: .9s ease all;
-}
-
-.button.uno:hover rect{
-    stroke-dashoffset: 0;
-}
-
-.button.dos svg{
-    width: 100px;
-    height: 50px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    fill: none;
-}
-
-.button.dos rect{
-    width: 100%;
-    height: 100%;
-    stroke: #d63031;
-    stroke-width: 4px;
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    transition: .9s ease all;
-}
-
-.button.dos:hover rect{
-    stroke-dashoffset: 0;
-}
 
 /*----------------------------Responsive tablet--------------------------------*/
 @media (max-width: 992px) {
@@ -588,13 +426,19 @@ body{
     #contacto{
         display: grid;
         grid-template:
-        "seccionIzquierda" auto
-        "seccionDerecha" auto / 
-        90%;
+        "first_section" auto
+        "second_section" auto / 
+        100%;
     }
 
-    .seccionDerecha{
-        padding: 2em;
+    .first_section{
+        padding: 3em;
+    }
+    
+    .form_box{
+        padding: 0;
+        height: 24em;
+        width: 100%;
     }
 
 }
@@ -718,15 +562,16 @@ body{
 #nosotros .stars{
     padding: 20px;
 }
+
 /*--------Responsive Contacto-----------*/
 
-    #contacto{
-         height: auto;
-         width: 100%;
-         grid-template:
-         "seccionIzquierda" auto 
-         "seccionDerecha" auto /
-         100%;
+   /*Responsive Contacto*/
+   #contacto{
+    /* display: grid; */
+    grid-template:
+    "first_section" auto
+    "second_section" auto / 
+    100%;
     }
 
     .seccionIzquierda img{
